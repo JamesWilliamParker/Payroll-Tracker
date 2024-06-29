@@ -31,6 +31,25 @@ const collectEmployees = function () {
 };
 console.log(employeesArray);
 
+// Display the average salary
+const displayAverageSalary = function (employeesArray) {
+  // TODO: Calculate and display the average salary
+  let avgTotal = 0;
+  const numberEmployees = employeesArray.length;
+
+  for (const employee of employeesArray) {
+    avgTotal += employee.salary;
+  }
+
+
+const avgSalary = avgTotal / numberEmployees;
+console.log(`Your employees have an average of ${avgSalary}!`); }
+// Select a random employee
+const getRandomEmployee = function(employeesArray) {
+  const randomEmployee = employeesArray[Math.floor(Math.random()*employeesArray.length)];
+  
+  console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`)
+}
 
 
 /*
@@ -75,6 +94,7 @@ const displayEmployees = function(employeesArray) {
 }
 
 const trackEmployeeData = function() {
+  console.log("Hello World!");
   const employees = collectEmployees();
 
   console.table(employees);
